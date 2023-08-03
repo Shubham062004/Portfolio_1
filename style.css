@@ -394,3 +394,19 @@ a {
 .heightincrease {
     height: 347px;
 }
+
+/*underline code*/
+a::after{
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: blue;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
